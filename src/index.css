@@ -1,13 +1,172 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Open+Sans:wght@600&display=swap');
+*{
+  color: #fff;
+  font-family: 'Open Sans' , sans-serif;
+  font-size: 16px; /* Increased font size */
+  line-height: 1.6; /* Improved line height */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2C2F33;;
+}
+
+.app { 
+  display: flex;
+  background-color:#23272A;
+}
+
+.side-bar {
+  background-color: #2C2F33; 
+  height: 100vh;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #40444B;
+}
+
+button{
+  background-color: #2C2F33; 
+  color: #FFFFFF;
+  border: 1px solid #40444B;
+  border-radius: 8px;
+  padding: 12px 20px; /* Adjusted padding */
+  margin: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #3C3F43; /* Hover effect */
+}
+
+.history li {
+  list-style-type: none;
+  padding: 12px 0px; /* Adjusted padding */
+  cursor:pointer;
+  border-bottom: 1px solid #40444B;;
+}
+
+.history li:hover {
+  background-color: #3C3F43; /* Hover effect */
+}
+
+/* Active chat style */
+.history li.active {
+  background-color: #5865F2; /* Active chat highlight */
+}
+
+nav {
+  border-top: 1px solid #40444B;
+  padding: 10px;
+}
+
+.main{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh; /* Full height */
+  padding: 20px;
+}
+
+.main h1 {
+  text-align:center; /* Centers text horizontally */
+  font-size: 30px;
+}
+
+.centered-title {
+  text-align: center; /* Centers text horizontally */
+  margin-top: auto;
+  margin-bottom: auto;
+  /* Additional styling if needed */
+}
+
+
+
+.info{
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px; 
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.bottom-section {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+}
+
+input {
+  width: calc(100% - 30px);
+  border: 1px solid #40444B;
+  background-color: #2C2F33;
+  color: #FFFFFF;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+input:focus {
+  outline: 2px solid #5865F2;; 
+
+}
+
+#submit {
+  cursor: pointer;
+  padding: 12px 15px; /* Match input height and padding */
+  background-color: #2C2F33; /* Button color */
+  border-radius: 8px;
+  color: #FFFFFF;
+}
+
+.feed{
+  overflow-y: auto;
+  width: 100%;
+  padding: 0;
+}
+
+.feed li{
+  display: flex;
+  background-color: #444654;
+  width: 100%;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px; /* Rounded corners */
+}
+
+.feed p{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  text-align: left;
+}
+
+.feed p.role{
+  min-width: 100px;
+  font-weight: bold; /* Bold role */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .side-bar {
+    width: 100%;
+    height: auto;
+  }
+
+  .main {
+    height: auto;
+  }
 }
